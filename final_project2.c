@@ -180,7 +180,7 @@ void dijkstra(int *graph,int num, int src)
             if (seen[v]==-1 && graph[curr.data*num+v]>0){
                //printf(" graph at curr.data*num+v[%i] :%i\n",curr.data*num+v,graph[curr.data*num+v]);
                 int cost=graph[curr.data*num_node+v];
-           // printf("the fuck %d\n",cost);
+           // printf("cost %d\n",cost);
                 push(&pq,v,cost+curr.priority);
                
             }
@@ -293,7 +293,7 @@ int main ( int argc, char *argv[] )
 	if(adj_graph){
 	free(adj_graph);//printf("free adj_graph\n");
 	}
-	
+	//fail to apply MPI since it take way to much time
 	if(node_handle!=NULL) {
 	free(node_handle);//printf("free node_handle\n");
 	}        
